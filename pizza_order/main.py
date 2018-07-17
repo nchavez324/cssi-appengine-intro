@@ -10,9 +10,10 @@ jinja_current_directory = jinja2.Environment(
 
 # Page where user can make an order for pizza.
 class OrderHandler(webapp2.RequestHandler):
+    # Take the user's order.
     def get(self):
-        input_template = jinja_current_directory.get_template('templates/input_order.html')
-        self.response.write(input_template.render())
+        template = jinja_current_directory.get_template('templates/take_order.html')
+        self.response.write(template.render())
 
 # Page with info about our Pizza Service.
 class AboutHandler(webapp2.RequestHandler):
