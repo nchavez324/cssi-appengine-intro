@@ -1,13 +1,13 @@
-application: example12
-version: 1
 runtime: python27
 api_version: 1
 threadsafe: true
 
 handlers:
+# Route localhost:8080/static_files/* to static_files/ folder.
 - url: /static_files
   static_dir: static_files
 
+# Route localhost:8080* (everything else) to 'app' in main.py.
 - url: .*
   script: main.app
 

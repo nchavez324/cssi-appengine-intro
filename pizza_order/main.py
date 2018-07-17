@@ -19,7 +19,10 @@ class AboutHandler(webapp2.RequestHandler):
     def get(self):
         self.response.write('This pizza does not stain your keyboard!')
 
+# Everything from localhost:8080* is routed here (except static_files).
 app = webapp2.WSGIApplication([
+  # Route localhost:8080/ to OrderHandler.
   ('/', OrderHandler),
+  # Route localhost:8080/about to AboutHandler.
   ('/about', AboutHandler),
 ], debug=True)
