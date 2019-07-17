@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <h1> Badum tisss! And the joke is:</h1>
+    {% if joke_is_good %}
+      <p>{{joke_line_1}}</p>
+      <p>{{joke_line_2}}</p>
+    {% else %}
+      Sorry, I got nothing!
+    {% endif %}
+    <img src="{{ image_url }}"></img>
+  </body>
+</html>

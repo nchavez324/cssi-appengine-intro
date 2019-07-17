@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <h1>{{ greeting }}</h1>
+  <h2>..to my joke generator</h2>
+  <p> We have all kinds of jokes: </p>
+  <ul>
+  {% for quality in available_qualities %}
+    <li> {{quality}} jokes </li>
+  {% endfor %}
+  </ul>
+</html>
