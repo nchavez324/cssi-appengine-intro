@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Joke Result</title>
+    <link href="/static/style.css" type="text/css" rel="stylesheet" />
   </head>
   <body>
     <h1> Badum tisss! And the joke is:</h1>
@@ -10,6 +12,6 @@
     {% else %}
       Sorry, I got nothing!
     {% endif %}
-    <img src="{{ image_url }}"></img>
+    <img id="result-image" src="{{ image_url }}"></img>
   </body>
 </html>

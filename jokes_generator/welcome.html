@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <h1>{{ greeting }}</h1>
-  <h2>..to my joke generator</h2>
-  <p> We have all kinds of jokes: </p>
-  <ul>
-  {% for quality in available_qualities %}
-    <li> {{quality}} jokes </li>
-  {% endfor %}
-  </ul>
+  <head>
+    <title>Joke Generator</title>
+    <link href="/static/style.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>{{ greeting }}</h1>
+    <h2>..to my joke generator</h2>
+    <p> We have all kinds of jokes: </p>
+    <ul>
+    {% for quality in available_qualities %}
+      <li> {{quality}} jokes </li>
+    {% endfor %}
+    </ul>
+    <a href="/result">Generate a joke!</a>
+  </body>
 </html>
