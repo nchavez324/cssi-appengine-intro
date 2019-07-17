@@ -27,7 +27,13 @@ class ResultPage(webapp2.RequestHandler):
         }
         self.response.write(template.render(template_vars))
 
+class SignupPage(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_env.get_template('signup.html')
+        self.response.write(template.render())
+
 app = webapp2.WSGIApplication([
     ('/', WelcomePage),
     ('/result', ResultPage),
+    ('/signup', SignupPage),
 ], debug=True)
